@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>Welcome to Event Scheduler</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.vticker-min.js"></script>
+<script type="text/javascript">
+$(function(){
+      $("#news").vTicker({
+		animation: 'fade',
+		mousePause: false,
+		showItems: 1
+	});
+});
+</script>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="button1">
+<ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="task/index.html" >Task Scheduler</a></li>
+<li><a href="rules.html" >Rules</a></li>
+<li><a href="signup/index.html">Sign Up</a></li>
+</ul>
+</div>
+<div id="sidebar">
+<div class="box">
+<br/><h2>Updates</h2><br/>
+<div id="news">
+<ul>
+<li>CSE101 booked for Sunday from 11am to 1pm.<br><a href="#">Read More</a></li>
+<li>CSE Lounge booked for Sunday from 10am to 1pm.<br> <a href="#">Read More</a></li>
+<li>CSE102 and CSE103 available for booking.<br><a href="#">Read More</a></li>
+</ul>
+</div>
+</div>
+</div>
+<form>
+<div>
+<h1>Login Form :</h1>
+<label>
+<span>Username</span><input id="name" type="text" name="name" />
+</label>
+<label>
+<span>Password</span><input id="email" type="text" name="email" />
+</label>
+<label>
+<input class="button" type="button" value="Submit Form" />
+</label>
+</div>
+</form>
+</body>
+</html>

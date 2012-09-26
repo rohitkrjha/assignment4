@@ -1,0 +1,330 @@
+<html>
+<head>
+<title>Event Scheduler</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.vticker-min.js"></script>
+<script type="text/javascript">
+$(function(){
+      $("#news").vTicker({
+		animation: 'fade',
+		mousePause: false,
+		showItems: 1
+	});
+});
+</script>
+
+<style type="text/css">
+
+#header{
+position: absolute;
+top: 20px;
+left: 20px;
+width: 1250px;
+height: 75px;
+font-size: 32px;
+text-align: center;
+/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+
+#footer{
+background-color: darkgray;
+position: absolute;
+top: 575px;
+left: 20px;
+width: 1250px;
+height: 40px;
+text-align: center;
+/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+
+body{
+background-color: darkgray;
+}
+
+form    {
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+margin:auto;
+padding-left: 20px;
+padding-top: 30px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 12px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+input    {
+width: 200px;
+display:block;
+border: 1px solid #999;
+height: 25px;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button1 {
+width:100px;
+position:absolute;
+right:20px;
+bottom:20px;
+background:#09C;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: 1px solid #999;
+}
+.button1:hover {
+background:#fff;
+color:#09C;
+}
+
+#sidebar {
+   position: absolute;
+   top: 50px;
+   left: 1000px;
+	height:300px;
+	width: 250px;
+	margin-top: 50px;
+	padding: 10px;
+	background: rgba(65, 70, 70, 0.4);
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+
+#sidebar
+{
+	-webkit-animation:myfirst 0.5s;
+	-webkit-transform-origin:left center;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transform:rotateY(0deg);
+	-moz-animation:myfirst 0.5s;
+	-moz-transform-origin:left center;
+	-moz-transform:rotateY(0deg);
+}
+
+@-webkit-keyframes myfirst  
+{
+	0%	{-webkit-transform:rotateY(90deg);}
+	100%	{-webkit-transform:rotateY(0deg);}
+}
+
+@-moz-keyframes myfirst  
+{
+	0%	{-moz-transform:rotateY(90deg);}
+	100%	{-moz-transform:rotateY(0deg);}
+}
+
+#start{
+	position: absolute;
+	display: block;
+	color: black;
+	margin-top: 50px;
+	margin-left: 50px;
+	padding-left: 20px;
+	padding-top: 30px;
+	height: 425px;
+	width: 600px;
+	top: 50px;
+	left: 250px;
+	border-color: white;
+	background-color: #2175bc;
+	z-index: 5000;
+/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+
+#login {
+	position: absolute;
+	display: block;
+	color: black;
+	margin-top: 50px;
+	margin-left: 0px;
+	height: 250px;
+	width: 225px;
+	top: 250px;
+	left: 20px;
+	border-color: white;
+	background-color: #2175bc;
+	z-index: 5000;
+/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%);
+}
+
+#button {
+	position: absolute;
+	width: 12em;
+	left: 20px;
+	top: 50px;
+	border-right: 1px solid #000;
+	padding: 0 0 1em 0;
+	margin-top: 50px; 
+	margin-bottom: 1em;
+	font-family: 'Trebuchet MS', 'Lucida Grande',
+	  Verdana, Lucida, Geneva, Helvetica, 
+	  Arial, sans-serif;
+	background-color: #90bade;
+	color: #333;
+	}
+
+#button ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		}
+		
+#button li {
+		border-bottom: 1px solid #90bade;
+		margin: 0;
+		}
+
+#button li a {
+		display: block;
+		padding: 5px 5px 5px 0.5em;
+		border-left: 10px solid #1958b7;
+		border-right: 10px solid #508fc4;
+		background-color: #2175bc;
+		color: #fff;
+		text-decoration: none;
+		width: 100%;
+		}
+
+
+
+</style>
+
+
+</head>
+<body>
+<div id="header">
+<p><b>Event Management Wesite for CSE Department</b></p>
+</div>
+
+<div id="start">
+<p><center><em>Welcome! <b>USER</b></em></center><br></br><b>Your current bookings:</b></br>
+<ul>
+<li>Room CS101 for class for all weekdays from 10 a.m. to 11 a.m.</li>
+<li>Room CS102 for Sunday(12-09-2012) from 9 a.m. to 12 noon.</li>
+</ul>
+</p>
+</div>
+
+<div id="button">
+<ul>
+<li><a href="#" >Home</a></li>
+<li><a href="task/index.html" >Task Scheduler</a></li>
+<li><a href="#" >Rules</a></li>
+<li><a href="#" >Contact Us</a></li>
+</ul>
+</div>
+
+<div id="sidebar">
+<div class="box">
+<br/><h2>Updates</h2><br/>
+<div id="news">
+<ul>
+<li>CSE101 booked for Sunday from 11am to 1pm.<br><a href="#">Read More</a></li>
+<li>CSE Lounge booked for Sunday from 10am to 1pm.<br> <a href="#">Read More</a></li>
+<li>CSE102 and CSE103 available for booking.<br><a href="#">Read More</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="login">
+<form>
+<div>
+<h1>Login Form :</h1>
+<label>
+<span>Username</span><input id="name" type="text" name="name" />
+</label>
+<label>
+<span>Password</span><input id="email" type="text" name="email" />
+</label>
+<label>
+<input class="button1" type="button1" value="Submit Form" />
+</label>
+</div>
+</form>
+</div>
+
+<div id="footer">
+<p>Designed by <b>Rohit Kumar Jha</b> as a part of assignment for course CS251.</p>
+</div>
+
+
+</body>
+</html>
