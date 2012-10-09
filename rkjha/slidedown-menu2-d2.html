@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Slide down menu - demo 2</title>
+	<link rel="stylesheet" href="css/slidedown-menu2.css">
+	<script type="text/javascript" src="js/slidedown-menu2.js"></script>	
+	<style type="text/css">
+	html{
+		height:100%;
+	}
+	body{
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+		font-size:0.8em;
+		margin:0px;
+		padding:0px;
+
+		background-color:#E2EBED;
+		height:100%;
+		text-align:center;
+	}
+	.clear{
+		clear:both;
+	}
+
+	#mainContainer{
+		width:760px;
+		text-align:left;
+		margin:0 auto;
+		background-color: #FFF;
+		border-left:1px solid #000;
+		border-right:1px solid #000;
+		height:100%;
+	}
+
+	#topBar{
+		width:760px;
+		height:100px;
+	}
+	#leftMenu{
+		width:200px;
+		padding-left:10px;
+		padding-right:10px;
+		float:left;
+	}
+	#mainContent{
+		width: 520px;
+		padding-right:10px;
+		float:left;
+	}
+	/*
+	General rules
+	*/
+	/* 	Layout CSS */
+	#dhtmlgoodies_slidedown_menu{
+
+		visibility:hidden;
+		border:1px solid #000;
+		padding:1px;
+
+		width: 182px;	/* IE 5.x */
+		width/* */:/**/182px;	/* Other browsers */
+		width: /**/182px;
+
+	}
+
+	/* All A tags - i.e menu items. */
+	#dhtmlgoodies_slidedown_menu a{
+		color: #000;
+		text-decoration:none;
+		display:block;
+		clear:both;
+
+		padding-left:2px;
+
+		width: 182px;	/* IE 5.x */
+		width/* */:/**/170px;	/* Other browsers */
+		width: /**/170px;
+
+	}
+
+	img{
+		border:0px;
+	}
+
+	/*
+	A tags
+	*/
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth1{	/* Main menu items */
+		margin-top:1px;
+		font-weight:bold;
+		background-color:#317082;
+		color:#FFF;
+		background-image:url('images/bg.gif');
+		height:30px;
+		line-height:30px;
+		vertical-align:middle;
+		padding-left:10px;
+		border-left:1px solid #000;
+		border-right:1px solid #000;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth2{	/* Sub menu items */
+		margin-top:1px;
+		text-align:center;
+		font-weight:bold;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth3{	/* Sub menu items */
+		margin-top:1px;
+		font-style:italic;
+		color:blue;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4{	/* Sub menu items */
+		margin-top:1px;
+		color:red;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth5{	/* Sub menu items */
+		margin-top:1px;
+	}
+
+	/* UL tags, i.e group of menu utems.
+	It's important to add style to the UL if you're specifying margins. If not, assign the style directly
+	to the parent DIV, i.e.
+
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1
+
+	instead of
+
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul
+	*/
+
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul{
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv2 ul{
+
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv3 ul{
+		margin-left:10px;
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4 ul{
+		margin-left:15px;
+		padding:1px;
+	}
+
+	</style>
+</head>
+<body>
+<div id="mainContainer">
+	<div id="topBar"><img src="http://www.dhtmlgoodies.com/images/heading3.gif"></div>
+	<div id="leftMenu">
+		<!-- START OF MENU -->
+		<div id="dhtmlgoodies_slidedown_menu">
+			<ul>
+				<li><a href="#">Products</a>
+					<ul>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/creditcard.gif"><br>
+						Pricing</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/mail.gif"><br>
+							Contact us</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/print.gif"><br>
+							Print</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Support</a>
+					<ul>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/network.gif"><br>
+						Pricing</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/book.gif"><br>
+							Partners</a></li>
+					</ul>
+				</li>
+				<li><a href="#">History</a>
+					<ul>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/book.gif"><br>
+						Sub menu item 1</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/trash.gif"><br>
+							Sub menu item 2</a></li>
+					</ul>
+				</li>
+				<li><a href="#">The team</a>
+					<ul>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/creditcard.gif"><br>
+						Sub menu item 3</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/write.gif"><br>
+							Sub menu item 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Locations</a>
+					<ul>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/creditcard.gif"><br>
+						Menu item</a></li>
+						<li><a href="http://www.dhtmlgoodies.com">
+							<img src="images/mail.gif"><br>
+							Menu item 2</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- END OF MENU -->
+		<script type="text/javascript">
+		expandFirstItemAutomatically = 1;
+		expandMenuItemByUrl = false;
+		initSlideDownMenu();
+		</script>
+	</div>
+	<div id="mainContent">
+	<p>Splendida porro oculi fugitant vitantque tueri. sol etiam caecat, contra si tendere pergas,propterea quia vis magnast ipsius et alteara per purum simulacra ferunturet feriunt oculos turbantia composituras. Praeterea splendor qui cumque est acer adurit saepe oculos ideo quod semina possidet ignismulta, dolorem oculis quae gignunt insinuando.lurida praeterea fiunt quae cumque tuenturarquati, quia luroris de corpore eorumsemina multa fluunt simulacris obvia rerum, multaque sunt oculis in eorum denique mixta,quae contage sua palloribus omnia pingunt. </p>
+	<p>E tenebris autem quae sunt in luce tuemurpropterea quia, cum propior caliginis arater init oculos prior et possedit apertos, insequitur candens confestim lucidus ar,qui quasi purgat eos ac nigras discutit umbrasaris illius; nam multis partibus hic estmobilior multisque minutior et mage pollens.qui simul atque vias oculorum luce replevit atque pate fecit, quas ante obsederat ar, continuo rerum simulacra secuntur, quae sita sunt in luce, lacessuntque ut videamus. quod contra facere in tenebris e luce nequimuspropterea quia posterior caliginis ar crassior insequitur, qui cuncta foramina completobsiditque vias oculorum, ne simulacrapossint ullarum rerum coniecta moveri. Quadratasque procul turris cum cernimus urbis,propterea fit uti videantur saepe rutundae, angulus optusus quia longe cernitur omnissive etiam potius non cernitur ac perit eiusplaga nec ad nostras acies perlabitur ictus,ara per multum quia dum simulacra feruntur,cogit hebescere eum crebris offensibus ar. hoc ubi suffugit sensum simul angulus omnis.fit quasi ut ad turnum saxorum structa tuantur;non tamen ut coram quae sunt vereque rutunda,sed quasi adumbratim paulum simulata videntur. </p>
+
+	<div class="clear"></div>
+</div>
+
+
+</body>
+</html>
